@@ -1,0 +1,89 @@
+/* Logged.css */
+
+.movies-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.movie-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.movie-image {
+  max-width: 100%;
+  max-height: 450px;
+  background-color: orange;
+  position: relative;
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.movie-title {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  font-family: 'Cursive', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.movie-link {
+  text-decoration: none;
+  color: black;
+}
+
+/* Add a pseudo-element for the hover effect */
+.movie-container:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Adjusted for centering */
+  z-index: 1;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  background-color: orange; /* Change to orange */
+  padding: 10px;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 2;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Show the dropdown content when hovering over the container */
+.movie-container:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+}
+
+/* Style for the button in the dropdown */
+.dropdown-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px; /* Added margin for separation */
+}

@@ -1,0 +1,78 @@
+/* SelectedMovie.css */
+
+.selected-movie-container {
+  display: flex;
+  background-color: #333; /* Dark gray color */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  color: black; /* Text color black */
+}
+
+.selected-movie-border {
+  background-color: #FFA500; /* Orange color */
+  border: 2px solid #ddd;
+  width: 1200px;
+  max-width: 600px; /* Adjust the max-width as needed */
+}
+
+.selected-movie-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selected-movie-image {
+  max-width: 100%;
+  max-height: 450px;
+  margin-bottom: 10px;
+}
+
+.selected-movie-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.movie-info-container {
+  text-align: center;
+}
+
+.movie-info-item {
+  margin-bottom: 10px;
+}
+
+.selected-movie-rating {
+  margin-bottom: 20px;
+}
+
+.selected-movie-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.reserve-button,
+.buy-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Radio button styling */
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+label {
+  margin-right: 15px;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+}

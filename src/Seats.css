@@ -1,0 +1,36 @@
+/* Seats.css */
+
+.seats-container {
+    text-align: center;
+  }
+  
+  .seats-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+  }
+  
+  .seat {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .seat.selected {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .seat.end-of-row {
+    margin-right: 0;
+  }
+  
+  p {
+    margin-top: 20px;
+  }
+  
